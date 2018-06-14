@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
 <link rel="stylesheet" href="css/demo.css">
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
 <h1>JavaScript Load Image Demo</h1>
@@ -28,6 +29,24 @@
     <table></table>
 </div>
 <br>
+<a id="navi" href="#" onclick="navi();">
+    <img src="/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/>
+</a>
+<script type='text/javascript'>
+    //<![CDATA[
+      // 사용할 앱의 JavaScript 키를 설정해 주세요.
+      Kakao.init('fc918c7914e3c02fa7dd4381fb99738a');
+      // 카카오 로그인 버튼을 생성합니다.
+      function navi(){
+          Kakao.Navi.start({
+              name: "현대백화점 판교점",
+              x: 127.11205203011632,
+              y: 37.39279717586919,
+              coordType: 'wgs84'
+          });
+      }
+    //]]>
+</script>
 <script src="js/load-image.js"></script>
 <script src="js/load-image-scale.js"></script>
 <script src="js/load-image-meta.js"></script>
