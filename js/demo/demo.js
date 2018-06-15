@@ -35,7 +35,6 @@ function toDecimal(f){
   !isNaN(LonDecimalDegrees) && !(LonDecimalDegrees > 180) && !(LonDecimalDegrees < -180)  ? f.LonDecimalDegrees.value = LonDecimalDegrees : f.LonDecimalDegrees.value = "";
 }
 
-
 $(function () {
   'use strict'
 
@@ -66,12 +65,12 @@ $(function () {
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLatitude"))
-        .append(cell.clone().text(convert(lat)))
+        .append(cell.clone().text(toDecimal(lat)))
     )
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLongitude"))
-        .append(cell.clone().text(convert(lag)))
+        .append(cell.clone().text(toDecimal(lag)))
     )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
