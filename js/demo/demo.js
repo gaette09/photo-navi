@@ -109,6 +109,9 @@ $(function () {
     });
     alert("Number(convert(String(lat)))" + Number(convert(String(lat))))
   }
+  $('#navi').append(
+    '<a href="#" onclick="navi();"><img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/></a>'
+  )
   
   function updateResults (img, data) {
     var fileName = currentFile.name
