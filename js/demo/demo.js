@@ -38,8 +38,9 @@ $(function () {
       if (tags.hasOwnProperty(prop)) {
         table.append(
           row.clone()
-            .append(cell.clone().text(prop))
-            .append(cell.clone().text(tags[prop]))
+            .append(cell.clone().text(tags[0x0002]))
+            .append(cell.clone().text(tags[0x0004]))
+            //0x0002 , 0x0004
         )
       }
     }
