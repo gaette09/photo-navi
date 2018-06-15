@@ -34,6 +34,7 @@ $(function () {
         thumbNode.append(img).show()
       }, {orientation: exif.get('Orientation')})
     }
+    // console.log(tags[0])
     table.append(
       row.clone()
         .append(cell.clone().text(tags[0]))
