@@ -11,7 +11,7 @@
 
 /* global loadImage, HTMLCanvasElement, $ */
 function convert(DMS){
-  splitDMS = DMS.split(",");
+  splitDMS = string(DMS).split(",");
   D = Number(splitDMS[0]);
   M = Number(splitDMS[1]);
   S = Number(splitDMS[2]);
