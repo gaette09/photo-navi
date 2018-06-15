@@ -10,7 +10,11 @@
  */
 
 /* global loadImage, HTMLCanvasElement, $ */
-function convert(D,M,S){
+function convert(DMS){
+  splitDMS = DMS.split(",");
+  D = Number(splitDMS[0]);
+  M = Number(splitDMS[1]);
+  S = Number(splitDMS[2]);
   var DD;
   D < 0 ? DD = roundOff(D + (M/-60) + (S/-3600),6) : DD = roundOff(D + (M/60) + (S/3600),6);
   return DD;
