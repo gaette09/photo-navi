@@ -34,16 +34,21 @@ $(function () {
         thumbNode.append(img).show()
       }, {orientation: exif.get('Orientation')})
     }
-    for (prop in tags) {
-      if (tags.hasOwnProperty(prop)) {
-        table.append(
-          row.clone()
-            .append(cell.clone().text(tags[0x0002]))
-            .append(cell.clone().text(tags[0x0004]))
-            //0x0002 , 0x0004
-        )
-      }
-    }
+    table.append(
+      row.clone()
+        .append(cell.clone().text(tags[2]))
+        .append(cell.clone().text(tags[0x0004]))
+    )
+    // for (prop in tags) {
+    //   if (tags.hasOwnProperty(prop)) {
+    //     table.append(
+    //       row.clone()
+    //         .append(cell.clone().text(prop))
+    //         .append(cell.clone().text(tags[prop]))
+    //         //0x0002 , 0x0004
+    //     )
+    //   }
+    // }
     exifNode.show()
   }
 
