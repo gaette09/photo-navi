@@ -236,8 +236,8 @@ Kakao.init('575c192a59fea538391774adb4cc3748');
 function navi(){
   Kakao.Navi.start({
       name: "현대백화점 판교점",
-      x: convert(lat),
-      y: convert(lag),
+      x: Number(convert(lat)),
+      y: Number(convert(lag)),
       coordType: 'wgs84'
   });
   // alert("Number(convert(String(lat)))" + Number(convert(String(lat))))
