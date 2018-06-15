@@ -10,6 +10,31 @@
  */
 
 /* global loadImage, HTMLCanvasElement, $ */
+function convert(D,M,S){
+  var DD;
+  D < 0 ? DD = roundOff(D + (M/-60) + (S/-3600),6) : DD = roundOff(D + (M/60) + (S/3600),6);
+  return DD;
+}
+function roundOff(num,decimalplaces){
+  var decimalfactor = Math.pow(10,decimalplaces);
+  var roundedValue = Math.round(num*decimalfactor)/decimalfactor;
+  return roundedValue;
+}
+function toDecimal(f){
+  var LatDegrees = parseInt(f.LatDegrees.value);
+  var LatMinutes = parseInt(f.LatMinutes.value);
+  var LatSeconds = parseInt(f.LatSeconds.value);
+  var LonDegrees = parseInt(f.LonDegrees.value);
+  var LonMinutes = parseInt(f.LonMinutes.value);
+  var LonSeconds = parseInt(f.LonSeconds.value);
+
+  var LatDecimalDegrees = convert(LatDegrees,LatMinutes,LatSeconds);
+  var LonDecimalDegrees = convert(LonDegrees,LonMinutes,LonSeconds);
+
+  !isNaN(LatDecimalDegrees) && !(LatDecimalDegrees > 90) && !(LatDecimalDegrees < -90) ? f.LatDecimalDegrees.value = LatDecimalDegrees : f.LatDecimalDegrees.value = "";
+  !isNaN(LonDecimalDegrees) && !(LonDecimalDegrees > 180) && !(LonDecimalDegrees < -180)  ? f.LonDecimalDegrees.value = LonDecimalDegrees : f.LonDecimalDegrees.value = "";
+}
+
 
 $(function () {
   'use strict'
@@ -41,12 +66,12 @@ $(function () {
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLatitude"))
-        .append(cell.clone().text(lat))
+        .append(cell.clone().text(convert(lat)))
     )
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLongitude"))
-        .append(cell.clone().text(lag))
+        .append(cell.clone().text(convert(lag)))
     )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
