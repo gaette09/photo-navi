@@ -97,18 +97,7 @@ $(function () {
     // }
     exifNode.show()
   }
-  // 사용할 앱의 JavaScript 키를 설정해 주세요.
-  Kakao.init('575c192a59fea538391774adb4cc3748');
-  // 카카오 로그인 버튼을 생성합니다.
-  function navi(){
-    Kakao.Navi.start({
-        name: "현대백화점 판교점",
-        x: Number(convert(String(lat))),
-        y: Number(convert(String(lag))),
-        coordType: 'wgs84'
-    });
-    // alert("Number(convert(String(lat)))" + Number(convert(String(lat))))
-  }
+  
   $('#navi').append(
     '<a href="#" onclick="navi();"><img src="https://developers.kakao.com/assets/img/about/buttons/navi/kakaonavi_btn_medium.png"/></a>'
   )
@@ -238,3 +227,17 @@ $(function () {
       }
     })
 })
+
+
+// 사용할 앱의 JavaScript 키를 설정해 주세요.
+Kakao.init('575c192a59fea538391774adb4cc3748');
+// 카카오 로그인 버튼을 생성합니다.
+function navi(){
+  Kakao.Navi.start({
+      name: "현대백화점 판교점",
+      x: Number(convert(String(lat))),
+      y: Number(convert(String(lag))),
+      coordType: 'wgs84'
+  });
+  // alert("Number(convert(String(lat)))" + Number(convert(String(lat))))
+}
