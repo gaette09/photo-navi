@@ -36,8 +36,7 @@ $(function () {
     }
     table.append(
       row.clone()
-        .append(cell.clone().text(tags[2]))
-        .append(cell.clone().text(tags[0x0004]))
+        .append(cell.clone().text(tags[0]))
     )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
