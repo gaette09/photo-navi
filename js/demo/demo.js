@@ -38,6 +38,17 @@ function roundOff(num,decimalplaces){
 //   !isNaN(LatDecimalDegrees) && !(LatDecimalDegrees > 90) && !(LatDecimalDegrees < -90) ? f.LatDecimalDegrees.value = LatDecimalDegrees : f.LatDecimalDegrees.value = "";
 //   !isNaN(LonDecimalDegrees) && !(LonDecimalDegrees > 180) && !(LonDecimalDegrees < -180)  ? f.LonDecimalDegrees.value = LonDecimalDegrees : f.LonDecimalDegrees.value = "";
 // }
+// 사용할 앱의 JavaScript 키를 설정해 주세요.
+Kakao.init('ae5774f9189404a1128dc1e630862dfa');
+// 카카오 로그인 버튼을 생성합니다.
+function navi(){
+  Kakao.Navi.start({
+      name: "현대백화점 판교점",
+      x: Number(convert(String(lat))),
+      y: Number(convert(String(lag))),
+      coordType: 'wgs84'
+  });
+}
 
 $(function () {
   'use strict'
@@ -96,7 +107,7 @@ $(function () {
     // }
     exifNode.show()
   }
-
+  
   function updateResults (img, data) {
     var fileName = currentFile.name
     var href = img.src
