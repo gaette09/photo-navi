@@ -34,6 +34,7 @@ $(function () {
         thumbNode.append(img).show()
       }, {orientation: exif.get('Orientation')})
     }
+    alert("tags.GPSLatitude : "+tags.GPSLatitude)
     console.log("tags[0] : "+tags[0])
     console.log("tags.GPSLatitude : "+tags.GPSLatitude)
     console.log("tags.GPSLongitude : "+tags.GPSLongitude)
