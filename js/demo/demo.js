@@ -11,7 +11,7 @@
 
 /* global loadImage, HTMLCanvasElement, $ */
 function convert(DMS){
-  splitDMS = string(DMS).split(",");
+  splitDMS = DMS.split(",");
   D = Number(splitDMS[0]);
   M = Number(splitDMS[1]);
   S = Number(splitDMS[2]);
@@ -69,12 +69,20 @@ $(function () {
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLatitude"))
-        .append(cell.clone().text(convert(lat)))
+        .append(
+          cell.clone().text(
+            convert(string(lat))
+          )
+        )
     )
     table.append(
       row.clone()
         .append(cell.clone().text("GPSLongitude"))
-        .append(cell.clone().text(convert(lag)))
+        .append(
+          cell.clone().text(
+            convert(string(lag))
+          )
+        )
     )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
