@@ -38,7 +38,8 @@ function roundOff(num,decimalplaces){
 //   !isNaN(LatDecimalDegrees) && !(LatDecimalDegrees > 90) && !(LatDecimalDegrees < -90) ? f.LatDecimalDegrees.value = LatDecimalDegrees : f.LatDecimalDegrees.value = "";
 //   !isNaN(LonDecimalDegrees) && !(LonDecimalDegrees > 180) && !(LonDecimalDegrees < -180)  ? f.LonDecimalDegrees.value = LonDecimalDegrees : f.LonDecimalDegrees.value = "";
 // }
-
+var lat;
+var lag;
 
 $(function () {
   'use strict'
@@ -53,8 +54,8 @@ $(function () {
   function displayExifData (exif) {
     var thumbnail = exif.get('Thumbnail')
     var tags = exif.getAll()
-    var lat = tags["GPSLatitude"];
-    var lag = tags["GPSLongitude"];
+    lat = tags["GPSLatitude"];
+    lag = tags["GPSLongitude"];
 
     var table = exifNode.find('table').empty()
     var row = $('<tr></tr>')
