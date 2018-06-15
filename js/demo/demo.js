@@ -23,7 +23,12 @@ $(function () {
 
   function displayExifData (exif) {
     var thumbnail = exif.get('Thumbnail')
-    var tags = exif.getAll()
+    // var tags = exif.getAll()
+    var lat = exif.GPSLatitude;
+    var lag = exif.GPSLongitude;
+    console.log("tags.GPSLatitude : "+lat);
+    console.log("tags.GPSLongitude : "+lag);
+    
     var table = exifNode.find('table').empty()
     var row = $('<tr></tr>')
     var cell = $('<td></td>')
@@ -34,10 +39,7 @@ $(function () {
         thumbNode.append(img).show()
       }, {orientation: exif.get('Orientation')})
     }
-    alert("tags.GPSLatitude : "+tags.GPSLatitude)
-    console.log("tags[0] : "+tags[0])
-    console.log("tags.GPSLatitude : "+tags.GPSLatitude)
-    console.log("tags.GPSLongitude : "+tags.GPSLongitude)
+    
     // table.append(
     //   row.clone()
     //     .append(cell.clone().text(tags[0]))
