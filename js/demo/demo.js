@@ -39,7 +39,7 @@ function roundOff(num,decimalplaces){
 //   !isNaN(LonDecimalDegrees) && !(LonDecimalDegrees > 180) && !(LonDecimalDegrees < -180)  ? f.LonDecimalDegrees.value = LonDecimalDegrees : f.LonDecimalDegrees.value = "";
 // }
 // 사용할 앱의 JavaScript 키를 설정해 주세요.
-Kakao.init('ae5774f9189404a1128dc1e630862dfa');
+Kakao.init('575c192a59fea538391774adb4cc3748');
 // 카카오 로그인 버튼을 생성합니다.
 function navi(){
   Kakao.Navi.start({
