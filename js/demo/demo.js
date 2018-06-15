@@ -26,9 +26,9 @@ $(function () {
     // var tags = exif.getAll()
     var lat = exif.GPSLatitude;
     var lag = exif.GPSLongitude;
-    console.log("tags.GPSLatitude : "+lat);
-    console.log("tags.GPSLongitude : "+lag);
-    
+    // console.log("tags.GPSLatitude : "+lat);
+    // console.log("tags.GPSLongitude : "+lag);
+
     var table = exifNode.find('table').empty()
     var row = $('<tr></tr>')
     var cell = $('<td></td>')
@@ -40,10 +40,11 @@ $(function () {
       }, {orientation: exif.get('Orientation')})
     }
     
-    // table.append(
-    //   row.clone()
-    //     .append(cell.clone().text(tags[0]))
-    // )
+    table.append(
+      row.clone()
+        .append(cell.clone().text(lat))
+        .append(cell.clone().text(lag))
+    )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
     //     table.append(
