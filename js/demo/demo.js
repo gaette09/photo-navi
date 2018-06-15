@@ -25,7 +25,7 @@ $(function () {
     var thumbnail = exif.get('Thumbnail')
     var tags = exif.getAll()
     var lat = tags["GPSLatitude"];
-    var lat = tags["GPSLongitude"];
+    var lag = tags["GPSLongitude"];
 
     var table = exifNode.find('table').empty()
     var row = $('<tr></tr>')
