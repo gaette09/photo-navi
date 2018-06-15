@@ -23,8 +23,10 @@ $(function () {
 
   function displayExifData (exif) {
     var thumbnail = exif.get('Thumbnail')
-    // var tags = exif.getAll()
-    var lat = exif.GPSLatitude;
+    var tags = exif.getAll()
+    // var lat = exif.GPSLatitude;
+    var lat = tags["GPSLatitude"];
+    var lat2 = tags[GPSLatitude];
     var lag = exif.GPSLongitude;
     // console.log("tags.GPSLatitude : "+lat);
     // console.log("tags.GPSLongitude : "+lag);
@@ -43,6 +45,7 @@ $(function () {
     table.append(
       row.clone()
         .append(cell.clone().text(lat))
+        .append(cell.clone().text(lat2))
         .append(cell.clone().text(lag))
     )
     // for (prop in tags) {
