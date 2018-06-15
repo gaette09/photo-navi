@@ -71,7 +71,7 @@ $(function () {
         .append(cell.clone().text("GPSLatitude"))
         .append(
           cell.clone().text(
-            convert(string(lat))
+            convert(String(lat))
           )
         )
     )
@@ -80,7 +80,7 @@ $(function () {
         .append(cell.clone().text("GPSLongitude"))
         .append(
           cell.clone().text(
-            convert(string(lag))
+            convert(String(lag))
           )
         )
     )
