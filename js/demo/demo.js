@@ -48,6 +48,7 @@ function navi(){
       y: Number(convert(String(lag))),
       coordType: 'wgs84'
   });
+  alert("Number(convert(String(lat)))" + Number(convert(String(lat))))
 }
 
 $(function () {
