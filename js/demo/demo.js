@@ -34,11 +34,13 @@ $(function () {
         thumbNode.append(img).show()
       }, {orientation: exif.get('Orientation')})
     }
-    // console.log(tags[0])
-    table.append(
-      row.clone()
-        .append(cell.clone().text(tags[0]))
-    )
+    console.log("tags[0] : "+tags[0])
+    console.log("tags.GPSLatitude : "+tags.GPSLatitude)
+    console.log("tags.GPSLongitude : "+tags.GPSLongitude)
+    // table.append(
+    //   row.clone()
+    //     .append(cell.clone().text(tags[0]))
+    // )
     // for (prop in tags) {
     //   if (tags.hasOwnProperty(prop)) {
     //     table.append(
