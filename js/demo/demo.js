@@ -40,12 +40,12 @@ $(function () {
     
     table.append(
       row.clone()
-        .append(cell.clone().text(GPSLatitude))
+        .append(cell.clone().text("GPSLatitude"))
         .append(cell.clone().text(lat))
     )
     table.append(
       row.clone()
-        .append(cell.clone().text(GPSLongitude))
+        .append(cell.clone().text("GPSLongitude"))
         .append(cell.clone().text(lag))
     )
     // for (prop in tags) {
