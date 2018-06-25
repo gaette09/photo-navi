@@ -39,6 +39,7 @@ $(function () {
     var coordinates
 
     function displayExifData(exif) {
+        console.log("exif : "+ exif)
         var thumbnail = exif.get('Thumbnail')
         var tags = exif.getAll()
         lat = tags["GPSLatitude"];
